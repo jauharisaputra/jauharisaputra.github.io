@@ -36,7 +36,6 @@
             text-align: center;
         }
 
-        /* CSS UNTUK FOTO PROFIL */
         .profile-pic {
             width: 150px;
             height: 150px;
@@ -52,9 +51,16 @@
             margin-bottom: 10px;
         }
         
-        .header p {
+        .header .tagline {
             font-size: 1.2em;
-            opacity: 0.9;
+            opacity: 0.95;
+            margin-bottom: 8px;
+        }
+
+        .header .university {
+            font-size: 1em;
+            opacity: 0.85;
+            font-style: italic;
         }
         
         .content {
@@ -62,7 +68,7 @@
         }
         
         .section {
-            margin-bottom: 35px;
+            margin-bottom: 40px;
         }
         
         .section h2 {
@@ -72,7 +78,20 @@
             border-bottom: 3px solid #667eea;
             padding-bottom: 10px;
         }
+
+        /* About Me */
+        .about-text {
+            font-size: 1.05em;
+            color: #444;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .about-text strong {
+            color: #667eea;
+        }
         
+        /* Projects */
         .project-card {
             background: #f8f9fa;
             border-left: 4px solid #667eea;
@@ -89,12 +108,29 @@
         
         .project-card h3 {
             color: #333;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+        }
+
+        .project-card .org-duration {
+            color: #667eea;
+            font-size: 0.95em;
+            font-weight: 600;
+            margin-bottom: 12px;
         }
         
         .project-card p {
-            color: #666;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        .project-card ul {
+            margin-left: 20px;
             margin-bottom: 15px;
+            color: #555;
+        }
+
+        .project-card ul li {
+            margin-bottom: 5px;
         }
         
         .btn {
@@ -105,12 +141,54 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background 0.3s ease;
+            font-weight: 600;
         }
         
         .btn:hover {
             background: #764ba2;
         }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 3px solid #667eea;
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category ul li {
+            padding: 5px 0;
+            color: #555;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .skill-category ul li:last-child {
+            border-bottom: none;
+        }
+
+        .skill-category ul li::before {
+            content: "▸ ";
+            color: #667eea;
+            font-weight: bold;
+        }
         
+        /* Certifications */
         .cert-list {
             list-style: none;
         }
@@ -125,16 +203,27 @@
         
         .cert-list strong {
             color: #333;
+            display: block;
+            margin-bottom: 4px;
         }
         
         .cert-list em {
             color: #666;
             font-size: 0.9em;
         }
+
+        .cert-list .cert-id {
+            display: block;
+            color: #888;
+            font-size: 0.8em;
+            font-family: 'Courier New', monospace;
+            margin-top: 4px;
+        }
         
+        /* Contact */
         .contact-info {
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             background: #f8f9fa;
             border-radius: 8px;
         }
@@ -144,88 +233,178 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
+            display: inline-block;
+            margin-bottom: 8px;
         }
         
         .contact-info a:hover {
             text-decoration: underline;
+            color: #764ba2;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .contact-info a {
+                display: block;
+                margin: 8px 0;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- HEADER -->
         <div class="header">
-            <!-- FOTO PROFIL -->
             <img src="profile.jpg" alt="Jauhari Saputra" class="profile-pic">
             <h1>Jauhari Saputra</h1>
-            <p>Informatics Student | Cybersecurity Enthusiast | EdTech Developer</p>
+            <p class="tagline">Informatics Student (GPA 3.97) | Cybersecurity Enthusiast | EdTech Developer</p>
+            <p class="university">Universitas Siber Asia (Asia Cyber University)</p>
         </div>
         
         <div class="content">
+            <!-- ABOUT ME -->
             <div class="section">
-                <h2>🚀 Featured Project</h2>
+                <h2>👤 About Me</h2>
+                <p class="about-text">
+                    I am an Informatics student with a deep passion for <strong>Cybersecurity</strong> and <strong>Educational Technology</strong>. With a strong background as an educator and former Head of the Computer and Network Engineering (TKJ) program, I specialize in bridging the gap between technology and education. I have hands-on experience developing secure web systems, automated grading solutions, and digital academic infrastructure. My goal is to leverage AI, OCR, and cybersecurity principles to build innovative, equitable, and efficient learning ecosystems.
+                </p>
+            </div>
+
+            <!-- PROJECTS -->
+            <div class="section">
+                <h2>🚀 Projects</h2>
+                
                 <div class="project-card">
-                    <h3>Japanese Language CBT Exam System</h3>
-                    <p>Web-based Computer-Based Test system with anti-cheating features for Japanese language proficiency exams (N5-N4). Built with HTML, CSS, and JavaScript.</p>
-                    <p><strong>Features:</strong> Browser lockdown, tab-switching detection, timer enforcement</p>
+                    <h3>Japanese Language CBT Exam System with Anti-Cheating Features</h3>
+                    <p class="org-duration">Jayadi Global Education Center (JGEC) • 2025</p>
+                    <p>Developed a web-based Computer-Based Test (CBT) system for Japanese language proficiency exams (N5-N4) with comprehensive anti-cheating mechanisms.</p>
+                    <ul>
+                        <li><strong>Browser Lockdown:</strong> Prevents students from opening new tabs during the exam.</li>
+                        <li><strong>Tab-Switching Detection:</strong> Logs suspicious activities in real-time.</li>
+                        <li><strong>Auto-Submit Timer:</strong> Ensures timely submission when time runs out.</li>
+                    </ul>
+                    <p><strong>Tech Stack:</strong> HTML5, CSS3, JavaScript, Google Sheets, GitHub Pages</p>
                     <a href="https://jauharisaputra.github.io/jayadi-daichi-quiz/index.html" class="btn" target="_blank">View Live Demo</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Student E-Rapor (Digital Report Card) System</h3>
+                    <p class="org-duration">SMKS HOSANA Tebas • 2023 - 2024</p>
+                    <p>Designed and developed a comprehensive digital report card system to replace manual grading and reporting processes, streamlining academic administration.</p>
+                    <ul>
+                        <li>Fully digitized the student grading and reporting workflow.</li>
+                        <li>Integrated database management and academic data processing algorithms.</li>
+                        <li>Provided real-time access to student performance analytics for teachers.</li>
+                    </ul>
+                    <p><strong>Tech Stack:</strong> Database Management (PL/SQL), Web Application Design, Data Processing Algorithms</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Automated OCR Grading System</h3>
+                    <p class="org-duration">SMPS Amkur Tebas • 2021 - 2023</p>
+                    <p>Implemented an innovative automated grading system using Optical Character Recognition (OCR) technology to efficiently scan and evaluate students' multiple-choice assignments.</p>
+                    <ul>
+                        <li>Drastically reduced manual grading time and minimized human error.</li>
+                        <li>Allowed teachers to focus more on interactive teaching methods.</li>
+                        <li>Successfully integrated into daily assessment routines for Mathematics and English.</li>
+                    </ul>
+                    <p><strong>Tech Stack:</strong> OCR Technology, Digital Assessment Platforms, Data Processing Tools</p>
+                </div>
+            </div>
+
+            <!-- SKILLS -->
+            <div class="section">
+                <h2>💡 Skills & Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>Web Development (HTML, CSS, JS, Java)</li>
+                            <li>Database Management (PL/SQL)</li>
+                            <li>Cybersecurity & Ethical Hacking</li>
+                            <li>Network Infrastructure (Cisco IPv6, Linux)</li>
+                            <li>OCR Technology Implementation</li>
+                            <li>AI & Machine Learning Basics</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Professional Skills</h3>
+                        <ul>
+                            <li>Educational Technology Integration</li>
+                            <li>Curriculum & Project Management</li>
+                            <li>Digital Content Development</li>
+                            <li>Public Speaking & Presentation</li>
+                            <li>Team Leadership & Problem Solving</li>
+                            <li>Academic System Design</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
+            <!-- CERTIFICATIONS -->
             <div class="section">
                 <h2>🏆 Certifications (9)</h2>
                 <ul class="cert-list">
-                    <!-- 1. AI & Machine Learning -->
                     <li>
-                        <strong>Artificial Intelligence with Machine Learning in Java</strong><br>
+                        <strong>Artificial Intelligence with Machine Learning in Java</strong>
                         <em>Oracle Academy, 2026</em>
                     </li>
-                    <!-- 2. Advanced Networking -->
                     <li>
-                        <strong>Next Generation Network Cisco IPv6 Training</strong><br>
+                        <strong>Next Generation Network Cisco IPv6 Training</strong>
                         <em>Hendevane Training Partner, 2024</em>
+                        <span class="cert-id">Certificate ID: HTP2020105143</span>
                     </li>
-                    <!-- 3. Cybersecurity -->
                     <li>
-                        <strong>Ethical Hacking Certification</strong><br>
+                        <strong>Ethical Hacking Certification</strong>
                         <em>HackerX, 2024</em>
+                        <span class="cert-id">Certificate ID: 1704420726741</span>
                     </li>
                     <li>
-                        <strong>Cyber Security Fundamentals</strong><br>
+                        <strong>Cyber Security Fundamentals</strong>
                         <em>Coding Studio, 2024</em>
+                        <span class="cert-id">Certificate ID: 77EB95B66F-77EB8624E0-77DFB82412</span>
                     </li>
                     <li>
-                        <strong>Penetration Testing Fundamentals</strong><br>
+                        <strong>Penetration Testing Fundamentals</strong>
                         <em>Coding Studio, 2024</em>
+                        <span class="cert-id">Certificate ID: 77EB95B66F-77FD2B0CA0-77DFB82412</span>
                     </li>
-                    <!-- 4. IT Infrastructure -->
                     <li>
-                        <strong>Computer Network Fundamentals</strong><br>
+                        <strong>Computer Network Fundamentals</strong>
                         <em>Coding Studio, 2024</em>
+                        <span class="cert-id">Certificate ID: 77EB95B66F-77EB5883A4-77DFB82412</span>
                     </li>
                     <li>
-                        <strong>Linux Command Fundamentals</strong><br>
+                        <strong>Linux Command Fundamentals</strong>
                         <em>Coding Studio, 2024</em>
+                        <span class="cert-id">Certificate ID: 77EB95B66F-77EB85612C-77DFB82412</span>
                     </li>
-                    <!-- 5. Programming -->
                     <li>
-                        <strong>Fundamental Algorithms</strong><br>
+                        <strong>Fundamental Algorithms</strong>
                         <em>Coding Studio, 2024</em>
+                        <span class="cert-id">Certificate ID: 77EB95B66F-77EB75F848-77DFB82412</span>
                     </li>
                     <li>
-                        <strong>Coding Foundations</strong><br>
+                        <strong>Coding Foundations</strong>
                         <em>SoloLearn, 2024</em>
                     </li>
                 </ul>
             </div>
             
+            <!-- CONTACT -->
             <div class="section">
                 <h2>📧 Contact</h2>
                 <div class="contact-info">
-                    <p>
-                        <a href="mailto:2025.jauharisaputra@student.unsia.ac.id">📧 Campus Email</a> |
-                        <a href="mailto:saputrajauhari064@gmail.com">📧 Personal Email</a> |
-                        <a href="https://github.com/jauharisaputra" target="_blank">💻 GitHub</a>
-                    </p>
+                    <a href="mailto:2025.jauharisaputra@student.unsia.ac.id">🎓 Campus Email</a>
+                    <a href="mailto:saputrajauhari064@gmail.com">📧 Personal Email</a>
+                    <a href="https://github.com/jauharisaputra" target="_blank">💻 GitHub</a>
+                    <a href="tel:+6285159296337">📞 +62-851-5929-6337</a>
                 </div>
             </div>
         </div>
