@@ -148,6 +148,37 @@
             background: #764ba2;
         }
 
+        /* Photo Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .gallery-description {
+            color: #555;
+            font-style: italic;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
         /* Skills */
         .skills-grid {
             display: grid;
@@ -256,6 +287,15 @@
                 display: block;
                 margin: 8px 0;
             }
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr; /* 2 kolom di HP */
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .gallery-grid {
+                grid-template-columns: 1fr; /* 1 kolom di HP layar sangat kecil */
+            }
         }
     </style>
 </head>
@@ -263,7 +303,7 @@
     <div class="container">
         <!-- HEADER -->
         <div class="header">
-            <img src="foto profil.png" alt="Jauhari Saputra" class="profile-pic">
+            <img src="img/foto profil.png" alt="Jauhari Saputra" class="profile-pic">
             <h1>Jauhari Saputra</h1>
             <p class="tagline">IT Professional | Trilingual Interpreter | EdTech Developer (GPA 3.95)</p>
             <p class="university">Universitas Siber Asia (Asia Cyber University)</p>
@@ -321,6 +361,26 @@
                     <ul>
                         <li>Drastically reduced manual grading time and minimized human error in score calculation.</li>
                     </ul>
+                </div>
+            </div>
+
+            <!-- JSDF GALLERY SECTION -->
+            <div class="section">
+                <h2>📸 JSDF Humanitarian Mission Gallery</h2>
+                <p class="gallery-description">
+                    Dokumentasi kegiatan dan penugasan sebagai Penerjemah Trilingual bersama personel Japan Self-Defense Forces (JSDF) di Kalimantan Barat.
+                </p>
+                <div class="gallery-grid">
+                    <!-- Ganti 'img/jsdf-1.jpg' dengan path/nama file foto Anda yang sebenarnya -->
+                    <img src="img/jsdf-1.jpg" alt="Bersama Personel JSDF 1" class="gallery-item" loading="lazy">
+                    <img src="img/jsdf-2.jpg" alt="Bersama Personel JSDF 2" class="gallery-item" loading="lazy">
+                    <img src="img/jsdf-3.jpg" alt="Bersama Personel JSDF 3" class="gallery-item" loading="lazy">
+                    <img src="img/jsdf-4.jpg" alt="Bersama Personel JSDF 4" class="gallery-item" loading="lazy">
+                    <img src="img/jsdf-5.jpg" alt="Bersama Personel JSDF 5" class="gallery-item" loading="lazy">
+                    <img src="img/jsdf-6.jpg" alt="Bersama Personel JSDF 6" class="gallery-item" loading="lazy">
+                    <img src="img/jsdf-7.jpg" alt="Bersama Personel JSDF 7" class="gallery-item" loading="lazy">
+                    <img src="img/jsdf-8.jpg" alt="Bersama Personel JSDF 8" class="gallery-item" loading="lazy">
+                    <img src="img/jsdf-9.jpg" alt="Bersama Personel JSDF 9" class="gallery-item" loading="lazy">
                 </div>
             </div>
 
