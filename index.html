@@ -91,7 +91,7 @@
             color: #667eea;
         }
         
-        /* Projects */
+        /* Projects & Experience */
         .project-card {
             background: #f8f9fa;
             border-left: 4px solid #667eea;
@@ -191,11 +191,13 @@
         /* Certifications */
         .cert-list {
             list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
         }
         
         .cert-list li {
             background: #f8f9fa;
-            margin-bottom: 10px;
             padding: 15px;
             border-radius: 5px;
             border-left: 3px solid #28a745;
@@ -263,7 +265,7 @@
         <div class="header">
             <img src="profile.jpg" alt="Jauhari Saputra" class="profile-pic">
             <h1>Jauhari Saputra</h1>
-            <p class="tagline">Informatics Student (GPA 3.97) | Cybersecurity Enthusiast | EdTech Developer</p>
+            <p class="tagline">IT Professional | Trilingual Interpreter | EdTech Developer (GPA 3.95)</p>
             <p class="university">Universitas Siber Asia (Asia Cyber University)</p>
         </div>
         
@@ -272,14 +274,24 @@
             <div class="section">
                 <h2>👤 About Me</h2>
                 <p class="about-text">
-                    I am an Informatics student with a deep passion for <strong>Cybersecurity</strong> and <strong>Educational Technology</strong>. With a strong background as an educator and former Head of the Computer and Network Engineering (TKJ) program, I specialize in bridging the gap between technology and education. I have hands-on experience developing secure web systems, automated grading solutions, and digital academic infrastructure. My goal is to leverage AI, OCR, and cybersecurity principles to build innovative, equitable, and efficient learning ecosystems.
+                    I am a Trilingual IT professional and educator specializing in <strong>Artificial Intelligence</strong>, <strong>Cybersecurity</strong>, and <strong>Educational Technology</strong>. I have demonstrated excellence in high-stakes environments as a Japanese-English-Indonesian interpreter for the Japan Self-Defense Forces (JSDF) during humanitarian missions. Backed by top-tier academic performance (GPA 3.95), I leverage my expertise to develop secure educational technologies, including anti-cheating CBT systems. I am passionate about bridging cross-cultural barriers and applying AI and security principles to solve complex, real-world challenges.
                 </p>
             </div>
 
-            <!-- PROJECTS -->
+            <!-- EXPERIENCE & PROJECTS -->
             <div class="section">
-                <h2>🚀 Projects</h2>
+                <h2>🚀 Experience & Key Projects</h2>
                 
+                <div class="project-card">
+                    <h3>Trilingual Interpreter — Humanitarian Mission</h3>
+                    <p class="org-duration">Japan Self-Defense Forces (JSDF) | West Kalimantan • Sep 2026</p>
+                    <ul>
+                        <li>Served as a Japanese-English-Indonesian interpreter during a JSDF humanitarian mission responding to forest and land fires (Karhutla).</li>
+                        <li>Facilitated communication regarding CH-47 helicopter firefighting, LCAC, and maritime logistics.</li>
+                        <li>Executed precise consecutive interpretation using professional Japanese (keigo) in a fast-paced field environment.</li>
+                    </ul>
+                </div>
+
                 <div class="project-card">
                     <h3>Japanese Language CBT Exam System with Anti-Cheating Features</h3>
                     <p class="org-duration">Jayadi Global Education Center (JGEC) • 2025</p>
@@ -287,34 +299,28 @@
                     <ul>
                         <li><strong>Browser Lockdown:</strong> Prevents students from opening new tabs during the exam.</li>
                         <li><strong>Tab-Switching Detection:</strong> Logs suspicious activities in real-time.</li>
-                        <li><strong>Auto-Submit Timer:</strong> Ensures timely submission when time runs out.</li>
+                        <li>Built using HTML, CSS, JavaScript, and Google Sheets.</li>
                     </ul>
-                    <p><strong>Tech Stack:</strong> HTML5, CSS3, JavaScript, Google Sheets, GitHub Pages</p>
                     <a href="https://jauharisaputra.github.io/jayadi-daichi-quiz/index.html" class="btn" target="_blank">View Live Demo</a>
                 </div>
 
                 <div class="project-card">
                     <h3>Student E-Rapor (Digital Report Card) System</h3>
-                    <p class="org-duration">SMKS HOSANA Tebas • 2023 - 2024</p>
-                    <p>Designed and developed a comprehensive digital report card system to replace manual grading and reporting processes, streamlining academic administration.</p>
+                    <p class="org-duration">SMKS HOSANA Tebas (Head of TKJ Program) • 2023 - 2024</p>
+                    <p>Designed and developed a comprehensive digital report card system to replace manual grading and reporting processes.</p>
                     <ul>
                         <li>Fully digitized the student grading and reporting workflow.</li>
-                        <li>Integrated database management and academic data processing algorithms.</li>
-                        <li>Provided real-time access to student performance analytics for teachers.</li>
+                        <li>Integrated database management (PL/SQL) and academic data processing algorithms.</li>
                     </ul>
-                    <p><strong>Tech Stack:</strong> Database Management (PL/SQL), Web Application Design, Data Processing Algorithms</p>
                 </div>
 
                 <div class="project-card">
                     <h3>Automated OCR Grading System</h3>
                     <p class="org-duration">SMPS Amkur Tebas • 2021 - 2023</p>
-                    <p>Implemented an innovative automated grading system using Optical Character Recognition (OCR) technology to efficiently scan and evaluate students' multiple-choice assignments.</p>
+                    <p>Implemented an automated grading system using Optical Character Recognition (OCR) technology to scan and evaluate multiple-choice assignments.</p>
                     <ul>
-                        <li>Drastically reduced manual grading time and minimized human error.</li>
-                        <li>Allowed teachers to focus more on interactive teaching methods.</li>
-                        <li>Successfully integrated into daily assessment routines for Mathematics and English.</li>
+                        <li>Drastically reduced manual grading time and minimized human error in score calculation.</li>
                     </ul>
-                    <p><strong>Tech Stack:</strong> OCR Technology, Digital Assessment Platforms, Data Processing Tools</p>
                 </div>
             </div>
 
@@ -327,21 +333,20 @@
                         <ul>
                             <li>Web Development (HTML, CSS, JS, Java)</li>
                             <li>Database Management (PL/SQL)</li>
-                            <li>Cybersecurity & Ethical Hacking</li>
-                            <li>Network Infrastructure (Cisco IPv6, Linux)</li>
+                            <li>Cybersecurity (Ethical Hacking, Pen Testing)</li>
+                            <li>IT Infrastructure (Cisco IPv6, Linux Networking)</li>
                             <li>OCR Technology Implementation</li>
-                            <li>AI & Machine Learning Basics</li>
+                            <li>AI Productivity & API Integration</li>
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h3>Professional Skills</h3>
+                        <h3>Languages & Professional Skills</h3>
                         <ul>
+                            <li>Indonesian (Native) | English (Advance)</li>
+                            <li>Japanese (Intermediate N5-N4, Field Interpretation)</li>
                             <li>Educational Technology Integration</li>
                             <li>Curriculum & Project Management</li>
-                            <li>Digital Content Development</li>
-                            <li>Public Speaking & Presentation</li>
-                            <li>Team Leadership & Problem Solving</li>
-                            <li>Academic System Design</li>
+                            <li>Cross-Cultural Communication</li>
                         </ul>
                     </div>
                 </div>
@@ -349,16 +354,29 @@
             
             <!-- CERTIFICATIONS -->
             <div class="section">
-                <h2>🏆 Certifications (9)</h2>
+                <h2>🏆 Achievements & Certifications</h2>
                 <ul class="cert-list">
+                    <li>
+                        <strong>AI Productivity and AI API Integration for Developers</strong>
+                        <em>Hacktiv8 Indonesia, 2026</em>
+                        <span class="cert-id">Certificate ID: 11510/H8/CSR/MBA2/IX/2026</span>
+                    </li>
+                    <li>
+                        <strong>English Proficiency Test (Advance)</strong>
+                        <em>Englishvit, 2026</em>
+                        <span class="cert-id">Certificate ID: EV/PT/09/2026/0019</span>
+                    </li>
+                    <li>
+                        <strong>ASEAN Cybersecurity Skilling Programme</strong>
+                        <em>ASEAN Foundation, 2026</em>
+                    </li>
+                    <li>
+                        <strong>ASEAN Digital Literacy Programme</strong>
+                        <em>ASEAN Foundation, 2026</em>
+                    </li>
                     <li>
                         <strong>Artificial Intelligence with Machine Learning in Java</strong>
                         <em>Oracle Academy, 2026</em>
-                    </li>
-                    <li>
-                        <strong>Next Generation Network Cisco IPv6 Training</strong>
-                        <em>Hendevane Training Partner, 2024</em>
-                        <span class="cert-id">Certificate ID: HTP2020105143</span>
                     </li>
                     <li>
                         <strong>Ethical Hacking Certification</strong>
@@ -376,23 +394,9 @@
                         <span class="cert-id">Certificate ID: 77EB95B66F-77FD2B0CA0-77DFB82412</span>
                     </li>
                     <li>
-                        <strong>Computer Network Fundamentals</strong>
-                        <em>Coding Studio, 2024</em>
-                        <span class="cert-id">Certificate ID: 77EB95B66F-77EB5883A4-77DFB82412</span>
-                    </li>
-                    <li>
-                        <strong>Linux Command Fundamentals</strong>
-                        <em>Coding Studio, 2024</em>
-                        <span class="cert-id">Certificate ID: 77EB95B66F-77EB85612C-77DFB82412</span>
-                    </li>
-                    <li>
-                        <strong>Fundamental Algorithms</strong>
-                        <em>Coding Studio, 2024</em>
-                        <span class="cert-id">Certificate ID: 77EB95B66F-77EB75F848-77DFB82412</span>
-                    </li>
-                    <li>
-                        <strong>Coding Foundations</strong>
-                        <em>SoloLearn, 2024</em>
+                        <strong>Next Generation Network Cisco IPv6 Training</strong>
+                        <em>Hendevane Training Partner, 2024</em>
+                        <span class="cert-id">Certificate ID: HTP2020105143</span>
                     </li>
                 </ul>
             </div>
